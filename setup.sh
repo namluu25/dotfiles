@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd ~
+
 # xcode build tool
 xcode-select --install
 
