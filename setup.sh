@@ -26,9 +26,7 @@ curl -o material-design-colors.itermcolors https://raw.githubusercontent.com/Mar
 # install Homebrew tap
 brew tap Homebrew/bundle
 
-# install git and moving config file
-brew install git
-git clone https://github.com/namluu25/mac-setup
+# moving config file
 rm .zshrc
 rm -rf .config
 mv ~/mac-setup/* ~
