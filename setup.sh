@@ -20,12 +20,13 @@ rm -rf fonts
 printf "${RED}install iterm material theme${NC}\n"
 wget https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
 
-
 printf "${RED}install install Homebrew tap${NC}\n"
 brew tap Homebrew/bundle
 
 printf "${RED}moving config file${NC}\n"
 cd ~
+rm -rf .config
+rm .zshrc
 shopt -s dotglob
 mv ~/mac-setup/* ~/
  
@@ -55,7 +56,6 @@ brew services start skhd
 printf "${RED}install oh-my-zsh${NC}\n"
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
 sh oh-my-zsh.sh --keep-zshrc
-compaudit | xargs chmod g-w,o-w
 
 printf "${RED}install zsh syntax highlighting${NC}\n"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
