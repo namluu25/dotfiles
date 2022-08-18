@@ -2,18 +2,13 @@
 
 cd ~
 
-# xcode build tool
-xcode-select --install
-
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # zsh2000 theme
 git clone https://github.com/maverick9000/zsh2000.git
-ln -s zsh2000.zsh-theme ~/.oh-my-zsh/themes/zsh2000.zsh-theme
+mv ~/zsh2000/zsh2000.zsh-theme ~/.oh-my-zsh/themes
+rm -rf zsh2000
 
 # poweline font
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -29,9 +24,8 @@ curl -o material-design-colors.itermcolors https://raw.githubusercontent.com/Mar
 brew tap Homebrew/bundle
 
 # moving config file
-rm .zshrc
-rm -rf .config
-mv ~/mac-setup/* ~
+mv ~/mac-setup/*(DN) ~/
+rm -rf .git
 
 # dump formulae/cask 
 brew bundle
@@ -49,12 +43,15 @@ nvm alias default lts/*
 # menubar
 git clone https://github.com/Jean-Tinland/simple-bar $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar
 
-# jetbrain font
-# brew install --cask font-jetbrains-mono
-
 # autorun yabai and skhd
 brew services start yabai
 brew services start skhd
 
-# restart zsh
-source ~/.zshrc
+# zsh syntax highlight
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# zsh auto suggestion
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

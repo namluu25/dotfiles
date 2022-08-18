@@ -89,6 +89,7 @@ history
 sudo
 yarn
 zsh-autosuggestions
+zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -125,10 +126,6 @@ alias c="code .";
 alias ll="ls -1a";
 alias ..="cd ../";
 alias ..l="cd ../ && ll";
-alias pg="echo 'Pinging Google' && ping www.google.com";
-alias de="cd ~/Desktop";
-alias dd="cd ~/code";
-alias d="cd ~/code && cd "
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
@@ -220,7 +217,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 MAILCHECK=0
-source /Users/namluu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /Users/namluu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
