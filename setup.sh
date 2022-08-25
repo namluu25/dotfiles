@@ -52,6 +52,7 @@ git clone https://github.com/Jean-Tinland/simple-bar $HOME/Library/Application\ 
 printf "${RED}make yabai/skhd autostart${NC}\n"
 brew services start yabai
 brew services start skhd
+brew cleanup
 
 printf "${RED}install oh-my-zsh${NC}\n"
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
