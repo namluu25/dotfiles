@@ -1,21 +1,18 @@
 #!/bin/sh
-sudo xcodebuild -license accept
 
 # color setup
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 MACHINE_TYPE=`uname -m`
-shasum=$(shasum -a 256 $(which yabai))
 
 rm -rf .git
-cd ~
 
 printf "${RED}install homebrew${NC}\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 if [ ${MACHINE_TYPE} == 'arm64' ]; then
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/[your-user-name]/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
@@ -76,6 +73,7 @@ git clone https://github.com/maverick9000/zsh2000.git
 mv ~/zsh2000/zsh2000.zsh-theme ~/.oh-my-zsh/themes
 rm -rf zsh2000
 
-echo -e "${RED}Run these later${NC}\nbrew install cloudflare-warp\nbrew install karabiner-elements\nbrew install teamviewer\n"
+echo -e "${RED}Run these later${NC}\nbrew install cloudflare-warp karabiner-elements teamviewer zulu\n"
+shasum=$(shasum -a 256 $(which yabai))
 echo -e "Run ${RED}sudo visudo -f /private/etc/sudoers.d/yabai${NC} and paste following line bellow (press i for ${RED}INSERT${NC}, ${RED}ESC+':wq'${NC} for save and quit \nnamluu ALL = (root) NOPASSWD: $shasum  --load-sa"
 exec zsh -l
