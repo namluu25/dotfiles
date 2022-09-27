@@ -161,15 +161,11 @@ if command -v peens 1>/dev/null 2>&1; then
 fi
 
 alias python=/Users/namluu/.pyenv/shims/python3
-# /usr/local/bin/python3
+/usr/local/bin/python3
 alias pip=/Users/namluu/.pyenv/shims/pip3
 # /Library/Frameworks/Python.framework/Versions/3.9/bin/pip3
 
 MAILCHECK=0
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH=/Users/namluu/Library/Android/sdk/platform-tools:$PATH
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
