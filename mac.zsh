@@ -67,6 +67,9 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/"
 #disable repeat key delay
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
+#hide menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
 killall Dock
 killall Finder
 sudo reboot

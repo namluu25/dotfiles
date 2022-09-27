@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 export ZSH_2000_DISABLE_RVM='true'
-export ZSH_2000_DISABLE_RIGHT_PROMPT='true'
+export ZSH_2000_DISABLE_RIGHT_PROMPT='false'
 export ZSH_2000_DEFAULT_USER='YOUR_USER_NAME'
 export ZSH_2000_DISABLE_STATUS='true'
 export ZSH_2000_DISABLE_GIT_STATUS='true'
@@ -127,10 +127,7 @@ alias c="code .";
 alias ll="ls -1a";
 alias ..="cd ../";
 alias ..l="cd ../ && ll";
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
-alias npm-update="npx npm-check -u";
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 
 ## git aliases
@@ -152,58 +149,12 @@ alias grf="git reflog";
 alias grh="git reset HEAD~" # last commit
 alias gac="git add . && git commit -a -m "
 alias gsu="git gpush --set-upstream origin "
-alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
-
-## checkout a new remote branch (exists remote, not locally)
-## git checkout -b LocalName origin/remotebranchname (checkout a remote branch)
-
-## npm aliases
-alias ni="npm install";
-alias nrs="npm run start -s --";
-alias nrb="npm run build -s --";
-alias nrd="npm run dev -s --";
-alias nrt="npm run test -s --";
-alias nrtw="npm run test:watch -s --";
-alias nrv="npm run validate -s --";
-alias rmn="rm -rf node_modules";
-alias flush-npm="rm -rf node_modules && npm i && echo NPM is done";
-
-## yarn aliases
-alias yar="yarn run"; # lists all the scripts we have available
-alias yab="yarn build"; # build dist directory for each package
-alias yal="yarn lint:fix"; # format source and auto-fix eslint issues
-alias yac="yarn commit"; # open a Q&A prompt to help construct valid commit messages
-alias yas="yarn start";
-alias yasb="yarn storybook:start"; # start storybook
-alias yat="yarn test"; # run the unit tests*
-alias yatw="yarn test:watch"; #run the unit tests for files changed on save
 
 ## docker
 alias dockerstop='docker-compose stop'
 alias dockerrestart='docker-compose restart'
 alias dockerup='docker-compose up -d'
 alias dockerrm='docker-compose rm --all'
-
-## other aliases
-alias zshrc='code ~/.zshrc'
-alias topten="history | commands | sort -rn | head"
-alias myip="curl http://ipecho.net/plain; echo"
-alias dirs='dirs -v | head -10'
-alias usage='du -h -d1'
-alias update="source ~/.zshrc"
-alias sshdir="cd ~/.ssh"
-alias runp="lsof -i "
-alias md="mkdir "
-alias ..='cd ..'
-alias ...='cd ../..'
-
-## this loads NVM
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-
-
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-
 
 if command -v peens 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -214,11 +165,8 @@ alias python=/Users/namluu/.pyenv/shims/python3
 alias pip=/Users/namluu/.pyenv/shims/pip3
 # /Library/Frameworks/Python.framework/Versions/3.9/bin/pip3
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 MAILCHECK=0
-# source /Users/namluu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

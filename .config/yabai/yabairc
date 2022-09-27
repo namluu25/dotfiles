@@ -30,17 +30,11 @@ yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^TeamViewer$" sticky=off layer=above manage=off
 yabai -m rule --add app="Fantastical" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
-#yabai -m rule --add app="^iTerm2$" manage=off
-yabai -m rule --add app="^Flux$" manage=off
-yabai -m rule --add app="^Time Out$" manage=off
-yabai -m rule --add app="^perl_client_app$" manage=off
-yabai -m rule --add app="^console$" manage=off
-yabai -m rule --add app="^Harvest$" manage=off
-yabai -m rule --add app="^CiscoSparkHelper$" manage=off
-yabai -m rule --add app="^Logi Options$" manage=off
-yabai -m rule --add app="^Cisco Webex Start$" manage=off
-yabai -m rule --add app="^Private Internet Access$" manage=off
+yabai -m rule --add app="Visual Studio Code" opacity=0.7
+yabai -m rule --add app="^iTerm2$" space=1
+yabai -m rule --add app="^Code$" space=2
+yabai -m rule --add app="^Google Chrome$" space=3
+yabai -m rule --add app="^(Soundcloud|Spotify)$" space 4
 
 ## Some random global settings
 #yabai -m config focus_follows_mouse          autoraise
@@ -69,11 +63,11 @@ yabai -m config mouse_action1 move
 
 ## Change how yabai looks
 # Set all padding and gaps to 20pt (default: 0)
-yabai -m config top_padding    28
-yabai -m config bottom_padding 0
-yabai -m config left_padding   0
-yabai -m config right_padding  0
-yabai -m config window_gap     10
+yabai -m config top_padding    38
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     20
 
 # Override gaps for space 2 only
 yabai -m config --space 2 window_gap 0
