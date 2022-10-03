@@ -129,6 +129,7 @@ alias ..="cd ../";
 alias ..l="cd ../ && ll";
 alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+alias diskcheck="smartctl -a disk0"
 
 ## git aliases
 function gc { git commit -m "$@"; }
