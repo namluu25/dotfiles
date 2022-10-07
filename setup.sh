@@ -41,6 +41,9 @@ git config --global user.email namluu253@gmail.com
 git config --global user.name "Nam Luu"
 git config --global core.editor nano
 
+printf "=>>${RED}copying MTMR config${NC}\n"
+cp items.json ~/Library/Application\ Support/MTMR
+
 printf "=>>${RED}setup NVM${NC}\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
@@ -76,7 +79,7 @@ git clone https://github.com/maverick9000/zsh2000.git
 mv ~/zsh2000/zsh2000.zsh-theme ~/.oh-my-zsh/themes
 rm -rf zsh2000
 
-echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer homebrew/cask-versions/zulu11\n"
+echo -e "=>>${RED}Run these later${NC}\nbrew install --cask background-music cloudflare-warp karabiner-elements parsec teamviewer homebrew/cask-versions/zulu11\n"
 shasum=$(shasum -a 256 $(which yabai))
 echo -e "=>>Run ${RED}sudo visudo -f /private/etc/sudoers.d/yabai${NC} and paste following line bellow (press i for ${RED}INSERT${NC}, ${RED}ESC+':wq'${NC} for save and quit \nnamluu ALL = (root) NOPASSWD: sha256:$shasum--load-sa"
 
