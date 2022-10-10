@@ -1,7 +1,6 @@
 [
-  { "type": "brightnessDown", "width": 40, "bordered": false, "align": "left" },
-  { "type": "brightness", "width": 120, "align": "left"},
-  { "type": "brightnessUp", "width": 40, "bordered": false, "align": "left" }, 
+  { "type": "brightnessDown", "width": 36, "align": "left", "bordered": false },
+  {"type": "brightnessUp", "width": 36, "align": "left", "bordered": false },
   {
     "type": "appleScriptTitledButton",
     "source": {
@@ -20,7 +19,7 @@
     "name": "Now Playing (Soundcloud)",
     "type": "appleScriptTitledButton",
     "source": {
-      "inline": "if application \"Chrome\" is running then\r\ttell application \"Chrome\"\r\t\trepeat with t in tabs of windows\r\t\t\ttell t\r\t\t\t\tif URL starts with \"https:\/\/soundcloud.com/\/discover\" or URL starts with \"https:\/\/soundcloud.com\/discover\" or URL starts with \"https:\/\/youtube.com\" then\r\t\t\t\t\treturn name of t as text\r\t\t\t\tend if\r\t\t\tend tell\r\t\tend repeat\r\tend tell\rend if\rreturn \"\""
+      "inline": "if application \"Chrome\" is running then\r\ttell application \"Chrome\"\r\t\trepeat with t in tabs of windows\r\t\t\ttell t\r\t\t\t\tif URL starts with \"https:\/\/soundcloud.com\/discover\" then\r\t\t\t\t\treturn name of t as text\r\t\t\t\tend if\r\t\t\tend tell\r\t\tend repeat\r\tend tell\rend if\rreturn \"\""
     },
     "action": "appleScript",
     "actionAppleScript": {
@@ -40,12 +39,6 @@
     "bordered": false
   },
   {
-    "type": "mute",
-    "bordered": false,
-    "align": "right",
-    "width": 40
-  },
-  {
     "type": "volumeDown",
     "bordered": false,
     "align": "right",
@@ -59,11 +52,15 @@
     "width": 40
   },
   {
-    "type": "play",
+    "type": "mute",
+    "bordered": false,
     "align": "right",
-    "width": 38
+    "width": 40
   },
- {
+  { "type": "previous", "width": 44, "align": "right"},
+  { "type": "play", "width": 44, "align": "right"},
+  { "type": "next", "width": 44, "align": "right"}, 
+  {
     "type": "battery",
     "width": 80,
     "align": "right",
