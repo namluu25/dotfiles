@@ -81,16 +81,9 @@ plugins=(
   git
   bundler
   dotenv
-  rake
-  last-working-dir
-  web-search
-  cloudfoundry
-extract
-history
-sudo
-yarn
-zsh-autosuggestions
-zsh-syntax-highlighting
+  yarn
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -162,7 +155,6 @@ if command -v peens 1>/dev/null 2>&1; then
 fi
 
 alias python=/Users/namluu/.pyenv/shims/python3
-/usr/local/bin/python3
 alias pip=/Users/namluu/.pyenv/shims/pip3
 # /Library/Frameworks/Python.framework/Versions/3.9/bin/pip3
 
