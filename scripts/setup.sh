@@ -31,9 +31,10 @@ cd ~
 rm -rf .config
 rm .zshrc
 shopt -s dotglob
-mv ~/mac-setup/* ~/
+mv ~/mac-setup/dotfiles/* ~/
  
 printf "=>>${RED}dumping formulae/cask${NC}\n"
+cd ~/mac-setup/configs
 brew bundle
 
 printf "=>>${RED}configuring github${NC}\n"
@@ -42,7 +43,7 @@ git config --global user.name "Nam Luu"
 git config --global core.editor nano
 
 printf "=>>${RED}copying MTMR config${NC}\n"
-cp items.json ~/Library/Application\ Support/MTMR
+cp ~/mac-setup/configs/items.json ~/Library/Application\ Support/MTMR
 
 printf "=>>${RED}setup NVM${NC}\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
