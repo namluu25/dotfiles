@@ -41,6 +41,7 @@ printf "=>>${RED}configuring github${NC}\n"
 git config --global user.email namluu253@gmail.com
 git config --global user.name "Nam Luu"
 git config --global core.editor nano
+git config --global core.excludesfile ~/.gitignore
 
 printf "=>>${RED}copying MTMR config${NC}\n"
 cp ~/mac-setup/configs/items.json ~/Library/Application\ Support/MTMR
