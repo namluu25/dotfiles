@@ -6,8 +6,6 @@ NC='\033[0m' # No Color
 
 MACHINE_TYPE=`uname -m`
 
-rm -rf .git
-
 printf "=>>${RED}install homebrew${NC}\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -27,15 +25,15 @@ printf "=>>${RED}install install Homebrew tap${NC}\n"
 brew tap Homebrew/bundle
 
 printf "=>>${RED}moving config file${NC}\n"
-cd ~
-rm -rf .config
-rm .zshrc
+rm -rf $HOME/.config
+rm $HOME/.zshrc
 shopt -s dotglob
-mv ~/mac-setup/dotfiles/* ~/
- 
+cp $HOME/dotfiles/dotfiles/* $HOME
+
 printf "=>>${RED}dumping formulae/cask${NC}\n"
-cd ~/mac-setup/configs
+cd $HOME/dotfiles/configs
 brew bundle
+cd $HOME/dotfiles
 
 printf "=>>${RED}configuring github${NC}\n"
 git config --global user.email namluu253@gmail.com
@@ -44,7 +42,7 @@ git config --global core.editor nano
 git config --global core.excludesfile ~/.gitignore
 
 printf "=>>${RED}copying MTMR config${NC}\n"
-cp ~/mac-setup/configs/items.json ~/Library/Application\ Support/MTMR
+cp $HOME/dotfiles/configs/items.json $HOME/Library/Application\ Support/MTMR
 
 printf "=>>${RED}setup NVM${NC}\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -68,7 +66,7 @@ brew services start skhd
 brew cleanup
 
 printf "=>>${RED}install oh-my-zsh${NC}\n"
-sh oh-my-zsh.sh --keep-zshrc
+sh $HOME/dotfiles/scripts/oh-my-zsh.sh --keep-zshrc
 
 printf "=>>${RED}install zsh syntax highlighting${NC}\n"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -77,12 +75,15 @@ printf "=>>${RED}install zsh auto suggestion${NC}\n"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 printf "=>>${RED}install zsh2000 theme${NC}\n"
+cd $HOME
 git clone https://github.com/maverick9000/zsh2000.git
-mv ~/zsh2000/zsh2000.zsh-theme ~/.oh-my-zsh/themes
+mv $HOME/zsh2000/zsh2000.zsh-theme $HOME/.oh-my-zsh/themes
 rm -rf zsh2000
 
 echo -e "=>>${RED}Run these later${NC}\nbrew install --cask background-music cloudflare-warp karabiner-elements parsec teamviewer homebrew/cask-versions/zulu11\n"
+
 shasum=$(shasum -a 256 $(which yabai))
+
 echo -e "=>>Run ${RED}sudo visudo -f /private/etc/sudoers.d/yabai${NC} and paste following line bellow (press i for ${RED}INSERT${NC}, ${RED}ESC+':wq'${NC} for save and quit \nnamluu ALL = (root) NOPASSWD: sha256:$shasum--load-sa"
 
 exec zsh -l
