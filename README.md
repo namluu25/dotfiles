@@ -3,7 +3,12 @@
 </p>
 
 <h2 align="center">.dotfiles</h2>
-<p align="center">My personal macOS dotfiles</p>
+<div align="center">
+My personal dotfiles for `macOS`. Just cherry pick the piece of code you totally understand.
+
+![platform](https://img.shields.io/badge/platform-macOS-blue)
+![last commit](https://img.shields.io/github/last-commit/namluu25/dotfiles)
+</div>
 
 ### Installation
 
