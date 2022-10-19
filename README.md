@@ -12,3 +12,9 @@ $ git clone https://github.com/namluu25/dotfiles.git
 $ cd dotfiles/
 $ make install
 ```
+
+### MacOS default
+```shell
+$ cd $HOME
+$ ./.macos
+```
