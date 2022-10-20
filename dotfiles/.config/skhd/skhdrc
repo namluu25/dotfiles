@@ -49,4 +49,4 @@ hyper - n : yabai -m space --create && \
 rcmd - q: yabai -m space --destroy
 
 # focus previous windows
-hyper - 0x04: yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.\"is-visible\" == true and .role != \"AXUnknown\")) | reverse | nth(index(map(select(.\"has-focus\" == true))) - 1).id")"
+hyper - 0x04: yabai -m window --focus "$(yabai -m query --windows --space | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.\"is-visible\" == true and .role != \"AXUnknown\")) | reverse | nth(index(map(select(.\"has-focus\" == true))) - 1).id")"
