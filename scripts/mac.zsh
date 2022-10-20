@@ -70,6 +70,9 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 #hide menu bar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
+#fix yabai tilting
+defaults write com.apple.finder DisableAllAnimations -bool true
+
 killall Dock
 killall Finder
 sudo reboot

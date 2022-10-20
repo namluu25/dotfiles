@@ -21,6 +21,7 @@ yabai -m config layout bsp
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Messenger$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
@@ -28,7 +29,7 @@ yabai -m rule --add app="^TeamViewer$" sticky=off layer=above manage=off
 yabai -m rule --add app="^iTerm2$" space=1
 yabai -m rule --add app="^(Code|qemu-system-aarch64)$" space=2
 yabai -m rule --add app="^Google Chrome$" space=3
-yabai -m rule --add app="^(Soundcloud|Spotify)$" space 4
+yabai -m rule --add app="^(Soundcloud|Spotify|DaftCloud|Spotify Premium)$" space 4
 
 ## Some random global settings
 #yabai -m config focus_follows_mouse          autoraise
@@ -42,8 +43,10 @@ yabai -m config window_opacity off
 yabai -m config window_opacity_duration 0.00
 yabai -m config active_window_opacity 1.0
 #yabai -m config normal_window_opacity        0.97
-#yabai -m config window_border                on | off
-
+yabai -m config window_border on
+yabai -m config window_border_width 6
+yabai -m config active_window_border_color 0xff76F4FF
+yabai -m config normal_window_border_color 0xff555555
 
 ## some other settings
 yabai -m config auto_balance off
@@ -57,14 +60,12 @@ yabai -m config mouse_action1 move
 
 ## Change how yabai looks
 # Set all padding and gaps to 20pt (default: 0)
-yabai -m config top_padding    38
+yabai -m config top_padding    10
 yabai -m config bottom_padding 10
 yabai -m config left_padding   10
 yabai -m config right_padding  10
 yabai -m config window_gap     20
 
-# Override gaps for space 2 only
-yabai -m config --space 2 window_gap 0
 echo "yabai configuration loaded.."
 
 #END
