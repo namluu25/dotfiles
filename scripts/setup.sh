@@ -41,16 +41,13 @@ git config --global user.name "Nam Luu"
 git config --global core.editor nano
 git config --global core.excludesfile ~/.gitignore
 
-printf "=>>${RED}copying MTMR config${NC}\n"
-cp $HOME/dotfiles/configs/items.json $HOME/Library/Application\ Support/MTMR
-
 printf "=>>${RED}setup NVM${NC}\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install --lts
-nvm alias default lts/*
+nvm alias default node
 
 printf "=>>${RED}install menubar${NC}\n"
 git clone https://github.com/Jean-Tinland/simple-bar $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar
@@ -80,7 +77,7 @@ git clone https://github.com/maverick9000/zsh2000.git
 mv $HOME/zsh2000/zsh2000.zsh-theme $HOME/.oh-my-zsh/themes
 rm -rf zsh2000
 
-echo -e "=>>${RED}Run these later${NC}\nbrew install --cask background-music cloudflare-warp karabiner-elements parsec teamviewer homebrew/cask-versions/zulu11\n"
+echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer\n"
 
 shasum=$(shasum -a 256 $(which yabai))
 
