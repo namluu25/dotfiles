@@ -73,11 +73,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 printf "=>>${RED}install zsh2000 theme${NC}\n"
 cd $HOME
-git clone https://github.com/maverick9000/zsh2000.git
-mv $HOME/zsh2000/zsh2000.zsh-theme $HOME/.oh-my-zsh/themes
-rm -rf zsh2000
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer\n"
+echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer zulu11\n"
 
 shasum=$(shasum -a 256 $(which yabai))
 
