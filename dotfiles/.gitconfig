@@ -1,8 +1,9 @@
 [user]
 	email = namluu253@gmail.com
-	name = Nathan
+	name = Nam Luu
 [core]
 	editor = nano
+	excludesfile = /Users/namluu/.gitignore
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

@@ -6,6 +6,9 @@ NC='\033[0m' # No Color
 
 MACHINE_TYPE=`uname -m`
 
+sudo xcodebuild -license accept
+sudo gem uninstall cocoapods
+
 printf "=>>${RED}install homebrew${NC}\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -48,6 +51,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install 16.17
 nvm alias default node
+corepack enable
 
 printf "=>>${RED}install menubar${NC}\n"
 git clone https://github.com/wernjie/clarity $HOME/Library/Application\ Support/Übersicht/widgets/clarity

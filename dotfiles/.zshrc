@@ -88,9 +88,6 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  bundler
-  dotenv
-  yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -187,4 +184,3 @@ eval "$(rbenv init - zsh)"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
