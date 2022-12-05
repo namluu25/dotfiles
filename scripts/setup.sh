@@ -6,6 +6,7 @@ NC='\033[0m' # No Color
 
 MACHINE_TYPE=`uname -m`
 
+softwareupdate --install-rosetta
 sudo xcodebuild -license accept
 sudo gem uninstall cocoapods
 
