@@ -12,7 +12,7 @@
       "openDevMenu": "Alt+Shift+D"
     }
   },
-  "darkMode": "system",
+  "darkMode": "light",
   "showWelcomeAtStartup": false,
   "suppressPluginErrors": false,
   "persistDeviceData": false,

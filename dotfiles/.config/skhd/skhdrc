@@ -34,7 +34,7 @@ hyper - r : yabai -m space --rotate 90
 hyper - f : yabai -m window --toggle zoom-fullscreen
 
 #terminal
-hyper - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+hyper - return : /Applications/kitty.app/Contents/MacOS/kitty
 
 # focus next display
 hyper - 0x32: yabai -m display --focus recent
