@@ -8,6 +8,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Fix yabai desktop
+defaults write com.apple.finder DisableAllAnimations -bool true
+
 # change hot corner
 defaults write com.apple.dock wvous-bl-corner -int 4
 defaults write com.apple.dock wvous-br-corner -int 2

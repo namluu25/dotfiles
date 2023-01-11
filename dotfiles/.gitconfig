@@ -12,3 +12,12 @@
 [includeIf "gitdir:~/dev/vmo/"]
     path = ~/dev/vmo/.gitconfig
 y
+[push]
+	autoSetupRemote = true
+[safe]
+	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
+	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
+	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
+	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
+	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
+	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
