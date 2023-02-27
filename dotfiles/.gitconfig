@@ -21,3 +21,5 @@ y
 	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
 	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
 	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
+[pull]
+	rebase = true

@@ -5,7 +5,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 MACHINE_TYPE=`uname -m`
-
+read -p "Press enter to continue"
 softwareupdate --install-rosetta
 sudo xcodebuild -license accept
 sudo gem uninstall cocoapods
