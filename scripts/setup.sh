@@ -71,6 +71,9 @@ brew cleanup
 printf "=>>${RED}install oh-my-zsh${NC}\n"
 sh $HOME/dotfiles/scripts/oh-my-zsh.sh --keep-zshrc
 
+printf "=>>${RED}install tpm${NC}\n"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 printf "=>>${RED}install zsh syntax highlighting${NC}\n"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 

@@ -6,4 +6,7 @@ setup:
 mac:
 	zsh scripts/mac.zsh
 
+backup:
+	bash scripts/backup.sh
+
 .PHONY: install
