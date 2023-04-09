@@ -6,7 +6,9 @@ NC='\033[0m' # No Color
 
 MACHINE_TYPE=`uname -m`
 read -p "Press enter to continue"
-softwareupdate --install-rosetta
+if [ ${MACHINE_TYPE} == 'arm64' ]; then
+    softwareupdate --install-rosetta
+fi
 sudo xcodebuild -license accept
 sudo gem uninstall cocoapods
 
