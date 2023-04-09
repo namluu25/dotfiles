@@ -186,5 +186,10 @@ eval "$(rbenv init - zsh)"
 
 export TERM=xterm-256color
 
+export CCACHE_SLOPPINESS=clang_index_store,file_stat_matches,include_file_ctime,include_file_mtime,ivfsoverlay,pch_defines,modules,system_headers,time_macros
+export CCACHE_FILECLONE=true
+export CCACHE_DEPEND=true
+export CCACHE_INODECACHE=true
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
