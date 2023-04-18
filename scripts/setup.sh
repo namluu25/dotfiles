@@ -57,7 +57,7 @@ nvm alias default node
 corepack enable
 
 printf "=>>${RED}install menubar${NC}\n"
-git clone https://github.com/rosenpin/clarity $HOME/Library/Application\ Support/Übersicht/widgets/clarity
+cp -r $HOME/dotfiles/configs/clarity $HOME/Library/Application\ Support/Übersicht/widgets/
 
 if [ ${MACHINE_TYPE} == 'arm64' ]; then
     sudo ln -s /opt/homebrew/bin/yabai /usr/local/bin/yabai

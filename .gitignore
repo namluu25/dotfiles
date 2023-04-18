@@ -1,3 +1,5 @@
 *.DS_Store
 .DS_Store
 configs/Brewfile.lock.json
+id*
+known*
