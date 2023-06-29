@@ -10,6 +10,10 @@ My personal dotfiles for `macOS`. Just cherry pick the piece of code you totally
 ![last commit](https://img.shields.io/github/last-commit/namluu25/dotfiles)
 </div>
 
+### Tmux
+
+Obtained from [oh-my-tmux](https://github.com/gpakosz/.tmux). With slighly modifiied. 
+
 ### Installation
 
 ```shell
