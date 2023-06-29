@@ -4,7 +4,7 @@
   "enableIOS": true,
   "enablePhysicalIOS": true,
   "enablePrefetching": 2,
-  "idbPath": "/Users/namluu/Library/Python/3.9/bin/idb",
+  "idbPath": "/opt/homebrew/bin/idb",
   "reactNative": {
     "shortcuts": {
       "enabled": false,
