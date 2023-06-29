@@ -3,6 +3,7 @@
 # color setup
 RED='\033[0;31m'
 NC='\033[0m' # No Color
+root_dir=$HOME/dotfiles
 
 MACHINE_TYPE=`uname -m`
 read -p "Press enter to continue"
@@ -33,13 +34,12 @@ brew tap Homebrew/bundle
 printf "=>>${RED}moving config file${NC}\n"
 rm -rf $HOME/.config
 rm $HOME/.zshrc
-shopt -s dotglob
-cp -rs $HOME/dotfiles/dotfiles/* $HOME
+${root_dir}/scripts/symlinks.sh $HOME/dotfiles/dotfiles
 
 printf "=>>${RED}dumping formulae/cask${NC}\n"
-cd $HOME/dotfiles/configs
+cd ${root_dir}/configs
 brew bundle
-cd $HOME/dotfiles
+cd ${root_dir}
 
 printf "=>>${RED}configuring github${NC}\n"
 git config --global user.email namluu253@gmail.com
