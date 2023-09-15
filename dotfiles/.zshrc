@@ -130,7 +130,7 @@ alias ..="cd ../";
 alias ..l="cd ../ && ll";
 alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
-alias diskcheck="smartctl -a disk0"
+alias folderUsage="du -sh * | sort -h"
 
 ## git aliases
 function gc { git commit -m "$@"; }
@@ -162,15 +162,15 @@ if command -v peens 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-alias python=/Users/namluu/.pyenv/shims/python3
-alias pip=/Users/namluu/.pyenv/shims/pip3
+alias python=/Users/namluu/.pyenv/shims/python2.7
+#alias pip=/Users/namluu/.pyenv/shims/pip3
 # /Library/Frameworks/Python.framework/Versions/3.9/bin/pip3
 
 MAILCHECK=0
 
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -192,6 +192,7 @@ export CCACHE_DEPEND=true
 export CCACHE_INODECACHE=true
 
 export PATH="$PATH:$HOME/flutter/bin"
+export PATH="${HOME}/.pyenv/shims:${PATH}"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

@@ -11,6 +11,8 @@
 	required = true
 [includeIf "gitdir:~/dev/vmo/"]
     path = ~/dev/vmo/.gitconfig
+[includeIf "gitdir:~/dev/vmo/etr/"]
+    path = ~/dev/vmo/etr/.gitconfig
 y
 [push]
 	autoSetupRemote = true
