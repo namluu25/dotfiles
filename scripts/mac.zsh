@@ -71,7 +71,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 #hide menu bar
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
+#defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
 #fix yabai tilting
 defaults write com.apple.finder DisableAllAnimations -bool true
