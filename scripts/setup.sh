@@ -34,7 +34,7 @@ brew tap Homebrew/bundle
 printf "=>>${RED}moving config file${NC}\n"
 rm -rf $HOME/.config
 rm $HOME/.zshrc
-${root_dir}/scripts/symlinks.sh $HOME/dotfiles/dotfiles
+sudo ${root_dir}/scripts/symlinks.sh $HOME/dotfiles/dotfiles
 
 printf "=>>${RED}dumping formulae/cask${NC}\n"
 cd ${root_dir}/configs
