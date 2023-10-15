@@ -34,7 +34,7 @@ brew tap Homebrew/bundle
 printf "=>>${RED}moving config file${NC}\n"
 rm -rf $HOME/.config
 rm $HOME/.zshrc
-sudo ${root_dir}/scripts/symlinks.sh $HOME/dotfiles/dotfiles
+sudo bash ${root_dir}/scripts/symlinks.sh $HOME/dotfiles/dotfiles
 
 printf "=>>${RED}dumping formulae/cask${NC}\n"
 cd ${root_dir}/configs
@@ -92,4 +92,4 @@ shasum=$(shasum -a 256 $(which yabai))
 
 echo -e "=>>Run ${RED}sudo visudo -f /private/etc/sudoers.d/yabai${NC} and paste following line bellow \nnamluu ALL = (root) NOPASSWD: sha256:$shasum --load-sa"
 
-exec zsh -l
+#exec zsh -l
