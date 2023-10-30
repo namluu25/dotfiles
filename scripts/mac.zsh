@@ -76,6 +76,9 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 #fix yabai tilting
 defaults write com.apple.finder DisableAllAnimations -bool true
 
+#delele all dock apps
+defaults write com.apple.dock persistent-apps -array
+
 killall Dock
 killall Finder
 sudo reboot
