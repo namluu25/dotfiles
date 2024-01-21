@@ -23,6 +23,7 @@ create_symlinks() {
         if [ -d "$file" ]; then
             # Create the corresponding directory in the target directory
             mkdir -p "$target_dir/$filename"
+            chmod 777 "$target_dir/$filename"
 
             # Recursively call the function on the subdirectory
             create_symlinks "$file" "$target_dir/$filename"

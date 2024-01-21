@@ -56,19 +56,19 @@ nvm install 16.17
 nvm alias default node
 corepack enable
 
-printf "=>>${RED}install menubar${NC}\n"
-cp -r $HOME/dotfiles/configs/clarity $HOME/Library/Application\ Support/Übersicht/widgets/
+#printf "=>>${RED}install menubar${NC}\n"
+#cp -r $HOME/dotfiles/configs/clarity $HOME/Library/Application\ Support/Übersicht/widgets/
 
-if [ ${MACHINE_TYPE} == 'arm64' ]; then
-    sudo ln -s /opt/homebrew/bin/yabai /usr/local/bin/yabai
-fi
+#if [ ${MACHINE_TYPE} == 'arm64' ]; then
+#    sudo ln -s /opt/homebrew/bin/yabai /usr/local/bin/yabai
+#fi
 
-printf "=>>${RED}make yabai/skhd autostart${NC}\n"
-#sudo yabai --install-sa
-#sudo yabai --load-sa
-brew services start yabai
-brew services start skhd
-brew cleanup
+#printf "=>>${RED}make yabai/skhd autostart${NC}\n"
+##sudo yabai --install-sa
+##sudo yabai --load-sa
+#brew services start yabai
+#brew services start skhd
+#brew cleanup
 
 printf "=>>${RED}install oh-my-zsh${NC}\n"
 sh $HOME/dotfiles/scripts/oh-my-zsh.sh --keep-zshrc
@@ -86,10 +86,10 @@ printf "=>>${RED}install powerlevel10k theme${NC}\n"
 cd $HOME
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer zulu11\n"
+#echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer zulu11\n"
 
-shasum=$(shasum -a 256 $(which yabai))
+#shasum=$(shasum -a 256 $(which yabai))
 
-echo -e "=>>Run ${RED}sudo visudo -f /private/etc/sudoers.d/yabai${NC} and paste following line bellow \nnamluu ALL = (root) NOPASSWD: sha256:$shasum --load-sa"
+#echo -e "=>>Run ${RED}sudo visudo -f /private/etc/sudoers.d/yabai${NC} and paste following line bellow \nnamluu ALL = (root) NOPASSWD: sha256:$shasum --load-sa"
 
 #exec zsh -l

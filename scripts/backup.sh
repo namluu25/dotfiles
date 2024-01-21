@@ -2,4 +2,4 @@
 
 cd $HOME/dotfiles/configs
 mv Brewfile Brewfile_$(date +%F)
-brew bundle dump
+brew bundle dump --taps --brews --casks --mas
