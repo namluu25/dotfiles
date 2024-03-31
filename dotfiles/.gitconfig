@@ -2,7 +2,7 @@
 	email = namluu253@gmail.com
 	name = Nam Luu
 [core]
-	editor = nano
+    pager = delta
 	excludesfile = /Users/namluu/.gitignore
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -13,20 +13,25 @@
     path = ~/dev/vmo/.gitconfig
 [includeIf "gitdir:~/dev/vmo/etr/"]
     path = ~/dev/vmo/etr/.gitconfig
-y
 [push]
 	autoSetupRemote = true
-[safe]
-	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
-	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
-	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
-	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
-	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
-	directory = /Users/namluu/actions-runner/~/dev/vmo/openart/openart/openart
 [pull]
 	rebase = true
 [credential]
-	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+    useHttpPath = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    line-numbers=true
+    side-by-side=true
+    hyperlink=true
+    hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[rebase]
+	autoStash = true

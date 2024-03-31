@@ -56,6 +56,9 @@ nvm install 16.17
 nvm alias default node
 corepack enable
 
+printf "==> ${RED}Installing latest Xcode${NC}\n"
+xcodes install --latest --experimental-unxip
+
 #printf "=>>${RED}install menubar${NC}\n"
 #cp -r $HOME/dotfiles/configs/clarity $HOME/Library/Application\ Support/Übersicht/widgets/
 
@@ -85,8 +88,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 printf "=>>${RED}install powerlevel10k theme${NC}\n"
 cd $HOME
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-#echo -e "=>>${RED}Run these later${NC}\nbrew install --cask cloudflare-warp karabiner-elements parsec teamviewer zulu11\n"
 
 #shasum=$(shasum -a 256 $(which yabai))
 

@@ -156,6 +156,9 @@ alias dockerrestart='docker-compose restart'
 alias dockerup='docker-compose up -d'
 alias dockerrm='docker-compose rm --all'
 
+# python webserver
+alias pythonftp='python3 -m http.server 9001'
+
 if command -v peens 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
