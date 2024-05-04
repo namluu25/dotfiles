@@ -3,7 +3,8 @@
 	name = Nam Luu
 [core]
     pager = delta
-	excludesfile = /Users/namluu/.gitignore
+	excludesfile = /Users/nathan/.gitignore
+	editor = nano
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -17,8 +18,6 @@
 	autoSetupRemote = true
 [pull]
 	rebase = true
-[credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
     useHttpPath = true
 [interactive]
@@ -35,3 +34,6 @@
     colorMoved = default
 [rebase]
 	autoStash = true
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager

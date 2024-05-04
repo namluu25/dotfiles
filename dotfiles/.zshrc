@@ -18,12 +18,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-export ZSH_2000_DISABLE_RVM='true'
-export ZSH_2000_DISABLE_RIGHT_PROMPT='false'
-export ZSH_2000_DEFAULT_USER='YOUR_USER_NAME'
-export ZSH_2000_DISABLE_STATUS='true'
-export ZSH_2000_DISABLE_GIT_STATUS='true'
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -121,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # user configuration
+
 # custom aliases
 alias c="code .";
 alias ll="ls -1a";
@@ -129,26 +124,6 @@ alias ..l="cd ../ && ll";
 alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias folderUsage="du -sh * | sort -h"
-
-## git aliases
-function gc { git commit -m "$@"; }
-alias gcm="git checkout master";
-alias gs="git status";
-alias gpull="git pull";
-alias gf="git fetch";
-alias gfa="git fetch --all";
-alias gf="git fetch origin";
-alias gpush="git push";
-alias gd="git diff";
-alias ga="git add .";
-alias gb="git branch";
-alias gbr="git branch remote"
-alias gfr="git remote update"
-alias gbn="git checkout -B "
-alias grf="git reflog";
-alias grh="git reset HEAD~" # last commit
-alias gac="git add . && git commit -a -m "
-alias gsu="git gpush --set-upstream origin "
 
 ## docker
 alias dockerstop='docker-compose stop'
@@ -159,20 +134,14 @@ alias dockerrm='docker-compose rm --all'
 # python webserver
 alias pythonftp='python3 -m http.server 9001'
 
-if command -v peens 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
-alias python=/Users/namluu/.pyenv/shims/python2.7
-#alias pip=/Users/namluu/.pyenv/shims/pip3
-# /Library/Frameworks/Python.framework/Versions/3.9/bin/pip3
-
 MAILCHECK=0
 
+# android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -187,10 +156,30 @@ eval "$(rbenv init - zsh)"
 
 export TERM=xterm-256color
 
+# CCache
 export CCACHE_SLOPPINESS=clang_index_store,file_stat_matches,include_file_ctime,include_file_mtime,ivfsoverlay,pch_defines,modules,system_headers,time_macros
 export CCACHE_FILECLONE=true
 export CCACHE_DEPEND=true
 export CCACHE_INODECACHE=true
 
+# flutter
 export PATH="$PATH:$HOME/flutter/bin"
-export PATH="${HOME}/.pyenv/shims:${PATH}"
+
+#history
+HISTFILE=$HOME/.zsh_history
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
+# brew
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

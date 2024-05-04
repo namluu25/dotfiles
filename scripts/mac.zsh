@@ -22,13 +22,16 @@ defaults write com.apple.dock tilesize -int 50
 defaults write com.apple.dock autohide -bool true
 
 # hide recent app
-defaults write com.apple.dock static-only -bool false
+defaults write com.apple.dock "show-recents" -bool "false"
 
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
 # move dock to right
 defaults write com.apple.dock orientation right
+
+# remove dock animation
+defaults write com.apple.dock "autohide-time-modifier" -float "0"
 
 # Show hidden files:
 defaults write com.apple.finder AppleShowAllFiles YES;
@@ -52,6 +55,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
+
+# Finder: show list view
+defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
 
 # Disable disk image verification
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
