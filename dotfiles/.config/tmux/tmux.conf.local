@@ -382,9 +382,10 @@ set -g status-position top
 
 # bind for floating term
 bind-key p if-shell "[ $(tmux display -p '#S') = 'scratch' ]" {
-    detach-client
+    #detach-client
+    kill-session -t scratch
 } {
-    display-popup -w 80% -h 80% -E "tmux new-session -A -s scratch"
+    display-popup -w 90% -h 90% -E "tmux new-session -A -s scratch"
 }
 
 # -- tpm -----------------------------------------------------------------------
