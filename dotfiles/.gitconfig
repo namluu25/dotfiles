@@ -3,7 +3,7 @@
 	name = Nam Luu
 [core]
     pager = delta
-	excludesfile = /Users/nathan/.gitignore
+	excludesfile = /Users/namluu/.gitignore
 	editor = nano
 [filter "lfs"]
 	clean = git-lfs clean -- %f

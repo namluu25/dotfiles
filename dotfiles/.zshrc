@@ -124,6 +124,7 @@ alias ..l="cd ../ && ll";
 alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias folderUsage="du -sh * | sort -h"
+alias brewclean="brew cleanup --prune=all"
 
 ## docker
 alias dockerstop='docker-compose stop'
@@ -183,3 +184,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export RUST_ANDROID_GRADLE_PYTHON_COMMAND=python3
