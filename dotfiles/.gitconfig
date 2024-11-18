@@ -3,7 +3,7 @@
 	name = Nam Luu
 [core]
     pager = delta
-	excludesfile = /Users/nathan/.gitignore
+	excludesfile = /Users/lhnam2/.gitignore
 	editor = nano
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -37,3 +37,5 @@
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://git.ethinking.de"]
+	provider = generic

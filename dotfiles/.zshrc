@@ -183,3 +183,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export RUST_ANDROID_GRADLE_PYTHON_COMMAND=python3
+export RUST_ANDROID_GRADLE_CARGO_COMMAND=$HOME/.cargo/bin/cargo
+export REACT_EDITOR=cursor
