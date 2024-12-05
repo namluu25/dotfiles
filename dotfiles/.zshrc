@@ -186,3 +186,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 export RUST_ANDROID_GRADLE_PYTHON_COMMAND=python3
+
+export PATH="$HOME/.cargo/bin:$PATH"
