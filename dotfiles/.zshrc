@@ -131,6 +131,7 @@ alias dockerstop='docker-compose stop'
 alias dockerrestart='docker-compose restart'
 alias dockerup='docker-compose up -d'
 alias dockerrm='docker-compose rm --all'
+alias nodeclear='npx npkill'
 
 # python webserver
 alias pythonftp='python3 -m http.server 9001'
