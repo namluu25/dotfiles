@@ -4,16 +4,11 @@
 [core]
     pager = delta
 	excludesfile = /Users/namluu/.gitignore
-	editor = nano
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[includeIf "gitdir:~/dev/vmo/"]
-    path = ~/dev/vmo/.gitconfig
-[includeIf "gitdir:~/dev/vmo/etr/"]
-    path = ~/dev/vmo/etr/.gitconfig
 [push]
 	autoSetupRemote = true
 [pull]
