@@ -189,3 +189,7 @@ eval "$(pyenv init -)"
 export RUST_ANDROID_GRADLE_PYTHON_COMMAND=python3
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)

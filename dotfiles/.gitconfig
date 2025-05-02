@@ -11,10 +11,6 @@
 	required = true
 [push]
 	autoSetupRemote = true
-[pull]
-	rebase = true
-[credential "https://dev.azure.com"]
-    useHttpPath = true
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -32,3 +28,5 @@
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true

@@ -7,7 +7,7 @@ brew bundle dump --taps --brews --casks --mas
 
 # Removing react native cache
 echo "Remove React Native cache"
-bash $HOME/dotfiles/scripts/cleanReactNative.sh $HOME/dev
+bash $HOME/dotfiles/scripts/clean_dev_caches.sh $HOME/dev
 
 # Check if the dev folder, .ssh folder, and .zsh_history file exist
 if [ ! -d "$HOME/dev" ]; then
