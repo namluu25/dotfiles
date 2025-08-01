@@ -193,3 +193,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/namluu/.dart-cli-completion/zsh-config.zsh ]] && . /Users/namluu/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
