@@ -125,6 +125,7 @@ alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
 alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
 alias folderUsage="du -sh * | sort -h"
 alias brewclean="brew cleanup --prune=all"
+alias iosSimClean="xcrun simctl shutdown all && xcrun simctl erase all"
 
 ## docker
 alias dockerstop='docker-compose stop'
@@ -135,6 +136,7 @@ alias nodeclear='npx npkill'
 
 # python webserver
 alias pythonftp='python3 -m http.server 9001'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 MAILCHECK=0
 
@@ -178,9 +180,6 @@ setopt hist_verify
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
-# brew
-export HOMEBREW_NO_AUTO_UPDATE=1
-
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -193,6 +192,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
+
+# flashlight
+export PATH="/Users/lhnam2/.flashlight/bin:$PATH"
+export REACT_EDITOR=cursor
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
