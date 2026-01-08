@@ -202,3 +202,4 @@ export REACT_EDITOR=cursor
 [[ -f /Users/namluu/.dart-cli-completion/zsh-config.zsh ]] && . /Users/namluu/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
