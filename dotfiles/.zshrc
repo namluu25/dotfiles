@@ -145,11 +145,6 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Load rbenv automatically by appending
 # the following to ~/.zshrc:
 
@@ -201,5 +196,16 @@ export REACT_EDITOR=cursor
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/namluu/.dart-cli-completion/zsh-config.zsh ]] && . /Users/namluu/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+
+# Added by Antigravity
+export PATH="/Users/lhnam2/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/lhnam2/.antigravity/antigravity/bin:$PATH"
+
+#FNM (replacement for nvm)
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
